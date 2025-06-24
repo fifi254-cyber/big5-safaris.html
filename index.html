@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Big 5 Safaris Adventures</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .slider {
+      display: flex;
+      width: max-content;
+      animation: scroll 25s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-green-50 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="bg-green-900 text-white py-4 px-6 mx-auto max-w-7xl rounded-full shadow-lg flex justify-between items-center">
+    <div class="flex gap-4">
+      <a href="#booking" class="hover:text-yellow-300">Booking</a>
+      <a href="#feedback" class="hover:text-yellow-300">Feedback</a>
+    </div>
+    <div class="text-2xl font-bold text-center">Big 5 Safaris</div>
+    <div class="flex gap-4">
+      <a href="#tours" class="hover:text-yellow-300">Tours</a>
+      <a href="#contact" class="hover:text-yellow-300">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1470&q=80');">
+    <div class="bg-black bg-opacity-60 p-10 rounded-lg shadow-lg text-center text-white">
+      <h1 class="text-5xl font-extrabold mb-4">Explore Africa's Big 5</h1>
+      <p class="text-xl mb-6">Join us for unforgettable safaris into the heart of the wild.</p>
+      <a href="#booking" class="bg-yellow-400 text-green-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section id="booking" class="py-20 px-4 bg-green-50">
+    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
+      <h2 class="text-4xl font-bold text-center mb-8 text-green-900">Book Your Safari</h2>
+      <form action="https://formspree.io/f/mlezvdry" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Full Name" class="w-full border border-gray-300 px-4 py-2 rounded" required />
+        <input type="email" name="email" placeholder="Email Address" class="w-full border border-gray-300 px-4 py-2 rounded" required />
+        <select name="tour" class="w-full border border-gray-300 px-4 py-2 rounded" required>
+          <option value="">Choose Safari</option>
+          <option value="Lion Safari">Lion Safari</option>
+          <option value="Elephant Expedition">Elephant Expedition</option>
+          <option value="Leopard Tracking">Leopard Tracking</option>
+        </select>
+        <input type="date" name="date" class="w-full border border-gray-300 px-4 py-2 rounded" required />
+        <textarea name="message" placeholder="Additional Notes" class="w-full border border-gray-300 px-4 py-2 rounded" rows="4"></textarea>
+        <button type="submit" class="w-full bg-green-900 text-white py-2 rounded hover:bg-green-800 transition">Submit Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedback" class="py-20 bg-white px-4 max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-10 text-green-900">Guest Feedback</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
+        <p class="text-lg italic">“An unforgettable experience! We saw all Big 5 and our guide was incredibly knowledgeable.”</p>
+        <p class="mt-4 font-bold">— Sarah M.</p>
+      </div>
+      <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
+        <p class="text-lg italic">“The booking process was seamless and the trip exceeded all expectations. Highly recommend.”</p>
+        <p class="mt-4 font-bold">— John D.</p>
+      </div>
+      <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
+        <p class="text-lg italic">“Best safari company ever! Our family felt safe and had so much fun. We’ll definitely return.”</p>
+        <p class="mt-4 font-bold">— Amina Y.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-green-100 px-6">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6">
+      <h2 class="text-3xl font-bold text-center mb-6 text-green-900">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="bg-green-50 p-4 rounded-md shadow">
+          <summary class="font-semibold cursor-pointer">What is included in the safari package?</summary>
+          <p class="mt-2">Accommodation, game drives, meals, and guides are all included.</p>
+        </details>
+        <details class="bg-green-50 p-4 rounded-md shadow">
+          <summary class="font-semibold cursor-pointer">Are children allowed?</summary>
+          <p class="mt-2">Yes! We offer family-friendly safaris for all ages.</p>
+        </details>
+        <details class="bg-green-50 p-4 rounded-md shadow">
+          <summary class="font-semibold cursor-pointer">Do I need special gear?</summary>
+          <p class="mt-2">Comfortable clothes, hats, sunscreen, and a camera are recommended.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="py-20 bg-white px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+      <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold mb-4 text-green-900">Contact Information</h3>
+      <p><strong>Email:</strong> info@big5safaris.com</p>
+      <p><strong>Phone:</strong> +254 712 345 678</p>
+      <p><strong>Address:</strong> P.O. Box 12345, Nairobi, Kenya</p>
+      </div>
+      <div class="bg-green-100 p-6 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold mb-4 text-green-900">Send Us a Message</h3>
+      <form action="#" class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded border" />
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded border" />
+        <textarea placeholder="Your Message" class="w-full px-4 py-2 rounded border" rows="4"></textarea>
+        <button type="submit" class="bg-green-900 text-white py-2 px-6 rounded hover:bg-green-800">Send</button>
+      </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners Section -->
+  <section id="partners" class="py-20 bg-blue-50 px-6">
+    <h2 class="text-4xl font-bold text-center text-green-900 mb-10">Our Trusted Partners</h2>
+    <div class="overflow-hidden relative">
+      <div class="slider gap-10 px-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/WWF_logo.svg" alt="WWF" class="h-20 w-20 object-contain bg-white rounded-full shadow-md p-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/National_Geographic_Logo.svg" alt="NatGeo" class="h-20 w-20 object-contain bg-white rounded-full shadow-md p-2">
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/e2/African_Wildlife_Foundation_logo.svg" alt="AWF" class="h-20 w-20 object-contain bg-white rounded-full shadow-md p-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/UNESCO_logo.svg" alt="UNESCO" class="h-20 w-20 object-contain bg-white rounded-full shadow-md p-2">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white py-12 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-green-800 p-4 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Our Address</h3>
+        <p>Big 5 Safaris Adventures</p>
+        <p>P.O. Box 12345</p>
+        <p>Nairobi, Kenya</p>
+        <p>Email: info@big5safaris.com</p>
+      </div>
+      <div class="bg-green-800 p-4 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Solus Wildlife Initiative</h3>
+        <p>A conservation partner protecting Africa's wildlife & ecosystems.</p>
+        <a href="https://soluswildlife.org" target="_blank" class="text-yellow-300 hover:underline block mt-2">Visit Site</a>
+      </div>
+      <div class="bg-green-800 p-4 rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-2">Follow Us</h3>
+        <a href="#" class="block hover:text-yellow-300">Instagram</a>
+        <a href="#" class="block hover:text-yellow-300">Facebook</a>
+        <a href="#" class="block hover:text-yellow-300">Twitter</a>
+      </div>
+    </div>
+    <p class="text-center text-sm text-gray-300 mt-10">© 2025 Big 5 Safaris Adventures. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
